@@ -9,42 +9,33 @@ class TelaModelo extends StatefulWidget {
 }
 
 class _TelaModeloState extends State<TelaModelo> {
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(248, 245, 240, 1),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home), 
+            label: 'Home'
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search), 
+            label: 'Search'
+          ),
+        ]),
+
       appBar: AppBar(
         title: Text('Teste'),
       ),
       body: const Center(
         child: Text('My Page!'),
       ),
-      drawer: Drawer(
-          backgroundColor: Color.fromRGBO(249, 241, 227, 1),
-          width: MediaQuery.of(context).size.width * 0.3,
-          child: Container(
-            alignment: Alignment.center,
-            child: ListView(padding: EdgeInsets.all(24), children: [
-              ListTile(
-                  leading: Icon(
-                    Icons.person_add,
-                    color: Colors.blue,
-                  ),
-                  title: Text('Amigos'),
-                  onTap: () {
-                    Navigator.pop(context);
-                  })
-            ]),
-          )),
+      
+
     );
   }
 }
