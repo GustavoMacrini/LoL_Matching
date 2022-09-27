@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,30 +14,21 @@ class _TelaModeloState extends State<TelaModelo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(248, 245, 240, 1),
+      return Scaffold(
+        backgroundColor: Color.fromRGBO(248, 245, 240, 1),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blue.shade200,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.abc_sharp), label: 'Menu'),
+          ],
+          selectedItemColor: Colors.amber[800],
+        ),
+      );
+    }
 
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home), 
-            label: 'Home'
-          ),
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search), 
-            label: 'Search'
-          ),
-        ]),
-
-      appBar: AppBar(
-        title: Text('Teste'),
-      ),
-      body: const Center(
-        child: Text('My Page!'),
-      ),
-      
-
-    );
-  }
+////////////////////////////
 }
+
+
+
