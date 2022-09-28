@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lol_matching/model/tela_modelo.dart';
 
-import 'model/tela_login.dart';
+import 'model/tela_modelo.dart';
+
 
 void main() {
   runApp(

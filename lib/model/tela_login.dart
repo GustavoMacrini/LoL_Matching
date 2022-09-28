@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,6 @@ class _TelaLoginState extends State<TelaLogin> {
             child:
             Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            
             children: [
               Text(
                 "LoL Matching", 
@@ -36,8 +35,10 @@ class _TelaLoginState extends State<TelaLogin> {
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                   color: Color.fromRGBO(222, 165, 71, 1)
-                )),
-            ],), 
+                ),
+              ),
+            ],
+            ), 
             ),
 
 
@@ -63,9 +64,11 @@ class _TelaLoginState extends State<TelaLogin> {
                     style: TextStyle(
                       fontSize: 16,
                       color: Color.fromRGBO(13, 196, 217, 1),
-                    ),),
+                    ),
                   ),
-                ],),
+                ),
+              ],
+              ),
             ),
 
             
@@ -83,12 +86,14 @@ class _TelaLoginState extends State<TelaLogin> {
                 width: 100, 
                 height: 100, 
                 ), 
-               ),),
+               ),
+              ),
               
             botao("ENTRAR"),
   
-        ],)
-        )
+        ],
+        ),
+        ),
       );
   }
 
@@ -110,7 +115,8 @@ class _TelaLoginState extends State<TelaLogin> {
           fontSize: 16
           ),
       ),
-      ),);
+      ),
+      );
   }
 
 
@@ -128,7 +134,8 @@ class _TelaLoginState extends State<TelaLogin> {
               color: Color.fromRGBO(222, 165, 71, 1),
               ),
             ),
-          ],),
+          ],
+          ),
 
         TextFormField(        
         style: 
@@ -144,7 +151,8 @@ class _TelaLoginState extends State<TelaLogin> {
           ),
         ), 
       ),
-      ],),
+      ],
+      ),
       );
   }
 }
