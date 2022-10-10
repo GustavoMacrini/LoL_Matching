@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_login.dart';
+import 'package:lol_matching/model/tela_modelo.dart';
 
 import 'model/tela_perfil.dart';
 
@@ -11,7 +12,7 @@ void main() {
     title: 'LoL Matching',
     initialRoute: 't1',
     routes: {
-      't1': (context) => TelaPerfil(),
+      't1': (context) => TelaModelo(),
     },
   ));
 }

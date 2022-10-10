@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:lol_matching/model/tela_perfil.dart';
 
 import 'new_page.dart';
 
@@ -18,35 +19,77 @@ class _TelaModeloState extends State<TelaModelo> {
     NewPageScreen("Item 2"),
     NewPageScreen("Item 3"),
     NewPageScreen("Item 4"),
-    NewPageScreen("Item 5"),
+    TelaPerfil(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _telas[_indiceAtual],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: 
+      BottomNavigationBar(
+        backgroundColor: Color.fromRGBO(222, 165, 71, 1),
         type: BottomNavigationBarType.fixed,
         currentIndex: _indiceAtual,
         items: [
+
+          //HOME
+          BottomNavigationBarItem(            
+            icon: Icon(Icons.home),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(190, 90, 4, 1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Icon(Icons.home),),
+            label: "",            
+          ),
+
+          //SEARCH
+          BottomNavigationBarItem(            
+            icon: Icon(Icons.search),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(190, 90, 4, 1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Icon(Icons.search),),
+            label: "",
+          ),
+
+          //SWORD
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage("lib/assets/navbar/sword.png")),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(190, 90, 4, 1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child:ImageIcon(AssetImage("lib/assets/navbar/sword.png"))),
+            label: "",
+          ),
+
+          //CHAT
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_outlined),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(190, 90, 4, 1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Icon(Icons.chat_outlined),),
+            label: "",
+          ),
+
+          //PERFIL
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: "1",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket),
-            label: "2",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "3",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.abc),
-            label: "4",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.back_hand),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(190, 90, 4, 1),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Icon(Icons.person),),
             label: "",
           ),
         ],
@@ -55,10 +98,11 @@ class _TelaModeloState extends State<TelaModelo> {
             _indiceAtual = index;
           });
         },
-        selectedItemColor: Colors.amber,
-        showSelectedLabels: true,
-        showUnselectedLabels: false,
-        //selectedLabelStyle: ,
+        selectedItemColor: Colors.black,        
+        showSelectedLabels: false,
+        showUnselectedLabels: false,     
+        //selectedLabelStyle:  ,
+        
         
       ),
     );

@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:lol_matching/main.dart';
 
 
+
 class TelaPerfil extends StatefulWidget {
   const TelaPerfil({Key? key}) : super(key: key);
 
@@ -38,7 +39,7 @@ class _TelaPerfilState extends State<TelaPerfil> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               
-              children: [
+              children: [                  
                   //Borda
                   CircleAvatar(
                     radius: 75.0,
