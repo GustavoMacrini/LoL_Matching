@@ -1,14 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:lol_matching/main.dart';
-import 'package:lol_matching/model/tela_login.dart';
-
+import 'package:lol_matching/model/tela_sobre.dart';
+import 'package:lol_matching/model/variaveis.dart';
 
 
 class TelaPerfil extends StatefulWidget {
@@ -19,13 +15,7 @@ class TelaPerfil extends StatefulWidget {
 }
 
 class _TelaPerfilState extends State<TelaPerfil> {      
-  var username = "Kindred Kawaii";
-  var discord = "usu.discord#123";
-  var elo = "Desafiante";
-  var pdl = "487";
-  var taxaVitoria = "48%";
-  var primaryColor = Color.fromRGBO(222, 165, 71, 1);
-  var secondaryColor = Color.fromRGBO(4, 32, 40, 1);
+  
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -59,7 +49,7 @@ class _TelaPerfilState extends State<TelaPerfil> {
       //DRAWER
       drawer: Drawer(
         width: MediaQuery.of(context).size.width*0.5,
-        backgroundColor: secondaryColor,                      
+        backgroundColor: secondaryColor,                           
         child: 
         Container(          
           child: 
@@ -78,6 +68,7 @@ class _TelaPerfilState extends State<TelaPerfil> {
                       color: primaryColor,
                       fontSize: 14,
                     ),),
+                  onTap: (){},
                 ),
 
 
@@ -90,7 +81,10 @@ class _TelaPerfilState extends State<TelaPerfil> {
                       color: primaryColor,
                       fontSize: 14
                     ),),
-
+                  onTap: (){
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => TelaSobre()));   
+                  },
                 ),
               ],
             ),
@@ -106,7 +100,12 @@ class _TelaPerfilState extends State<TelaPerfil> {
                   color: primaryColor,
                   fontSize: 14,
                 ),),
-                
+                // onTap: (){
+                //   Navigator.of(context).pop(
+                //     MaterialPageRoute(builder: (context) => TelaLogin())
+                //   );
+                // },
+                onTap: (){},
             ),
 
         ]),

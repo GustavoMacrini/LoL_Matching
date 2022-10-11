@@ -29,7 +29,7 @@ class _TelaModeloState extends State<TelaModelo> {
       body: _telas[_indiceAtual],
       bottomNavigationBar: 
       BottomNavigationBar(
-        backgroundColor: Color.fromRGBO(222, 165, 71, 1),
+        backgroundColor: primaryColor,
         type: BottomNavigationBarType.fixed,
         currentIndex: _indiceAtual,
         items: [

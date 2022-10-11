@@ -3,6 +3,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:lol_matching/model/variaveis.dart';
 
 class TelaLogin extends StatefulWidget {
   const TelaLogin({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(4, 32, 40, 1),
+      backgroundColor: secondaryColor,
       body: 
       
         Container(
@@ -36,15 +37,13 @@ class _TelaLoginState extends State<TelaLogin> {
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(222, 165, 71, 1)
+                  color: primaryColor,
                 ),
               ),
             ],
             ), 
             ),
-
-
-            // ARRUMAR ISSO TA MT FEIO
+            
             Container(
               margin: EdgeInsets.only(bottom: 36),
               child: campoTexto("Login", false),
@@ -114,14 +113,14 @@ class _TelaLoginState extends State<TelaLogin> {
       height: 58,
       child: ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Color.fromRGBO(222, 165, 71, 1),        
+        primary: primaryColor,        
         ),
       onPressed: (){}, 
       child: 
       Text(
         titulo, 
         style: TextStyle(
-          color: Color.fromRGBO(4, 32, 40, 1), 
+          color: secondaryColor, 
           fontSize: 16
           ),
       ),
@@ -141,7 +140,7 @@ class _TelaLoginState extends State<TelaLogin> {
             Text(title,
              style: TextStyle(
               fontSize: 20,
-              color: Color.fromRGBO(222, 165, 71, 1),
+              color: primaryColor,
               ),
             ),
           ],
