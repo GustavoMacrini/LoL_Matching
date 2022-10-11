@@ -1,10 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:lol_matching/main.dart';
+import 'package:lol_matching/model/tela_login.dart';
 
 
 
@@ -22,18 +25,105 @@ class _TelaPerfilState extends State<TelaPerfil> {
   var pdl = "487";
   var taxaVitoria = "48%";
   var primaryColor = Color.fromRGBO(222, 165, 71, 1);
+  var secondaryColor = Color.fromRGBO(4, 32, 40, 1);
+  var scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(4, 32, 40, 1),
-      body: 
-      Container(
-        margin: EdgeInsets.only(top: 30),
+      key: scaffoldKey,
+
+      //APPBAR INVISIVEL
+      appBar: 
+      PreferredSize(
+        preferredSize: Size.fromHeight(30.0),        
+        child:       
+        AppBar(
+          backgroundColor: Colors.transparent,          
+          elevation: 0,
+          leading:
+            IconButton(            
+            onPressed: (){scaffoldKey.currentState?.openDrawer();},
+            icon: Icon(Icons.menu, color: primaryColor,),    
+              iconSize: 30,
+              //Deixa o efeito de clique praticamente invisivel
+              splashRadius: 1,                                               
+            ),                      
+          actions: [  
+          ],
+          
+        ),
+      ),
+
+      
+      //DRAWER
+      drawer: Drawer(
+        width: MediaQuery.of(context).size.width*0.5,
+        backgroundColor: secondaryColor,                      
         child: 
+        Container(          
+          child: 
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+
+            //EXIBIR DISCORD
+            Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.check_box_outline_blank, 
+                    color: primaryColor,),
+                  title: Text("Exibir Discord", 
+                    style: TextStyle(
+                      color: primaryColor,
+                      fontSize: 14,
+                    ),),
+                ),
+
+
+                //SOBRE
+                ListTile(
+                  leading: Icon(Icons.info_outline,
+                    color: primaryColor,),
+                  title: Text("Sobre nós",
+                    style: TextStyle(
+                      color: primaryColor,
+                      fontSize: 14
+                    ),),
+
+                ),
+              ],
+            ),
+
+            //LOGOUT
+            ListTile(
+              
+              leading: Icon(Icons.exit_to_app,
+                color: primaryColor,
+                ),
+              title: Text("Logout",
+                style: TextStyle(
+                  color: primaryColor,
+                  fontSize: 14,
+                ),),
+                
+            ),
+
+        ]),
+
+        )
+        ),            
+
+
+      //BODY
+      backgroundColor: secondaryColor,
+      body:       
+      Container(
+        //margin: EdgeInsets.only(top: 30),
+        child:         
         Column(
           
-          children: [
+          children: [                      
 
             //FOTO PERFIL
             Row(
