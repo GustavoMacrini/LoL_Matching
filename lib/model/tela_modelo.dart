@@ -18,8 +18,7 @@ class _TelaModeloState extends State<TelaModelo> {
   final List<Widget> _telas = [
     TelaHome(),
     NewPageScreen("Item 2"),
-    NewPageScreen("Item 3"),
-    NewPageScreen("Item 4"),
+    NewPageScreen("Item 3"),    
     TelaPerfil(),
   ];
 
@@ -80,18 +79,18 @@ class _TelaModeloState extends State<TelaModelo> {
           ),
 
           //CHAT
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat_outlined),
-            activeIcon: Container(
-              width: 30,
-              height: 30,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(190, 90, 4, 1),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Icon(Icons.chat_outlined),),
-            label: "",
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.chat_outlined),
+          //   activeIcon: Container(
+          //     width: 30,
+          //     height: 30,
+          //     decoration: BoxDecoration(
+          //       color: Color.fromRGBO(190, 90, 4, 1),
+          //       borderRadius: BorderRadius.circular(5),
+          //     ),
+          //     child: Icon(Icons.chat_outlined),),
+          //   label: "",
+          // ),
 
           //PERFIL
           BottomNavigationBarItem(

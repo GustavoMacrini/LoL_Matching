@@ -3,6 +3,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:lol_matching/model/tela_login.dart';
 import 'package:lol_matching/model/tela_sobre.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
@@ -100,12 +101,9 @@ class _TelaPerfilState extends State<TelaPerfil> {
                   color: primaryColor,
                   fontSize: 14,
                 ),),
-                // onTap: (){
-                //   Navigator.of(context).pop(
-                //     MaterialPageRoute(builder: (context) => TelaLogin())
-                //   );
-                // },
-                onTap: (){},
+                onTap: (){
+                  Navigator.popUntil(context, (route) => route.isFirst);
+                },
             ),
 
         ]),

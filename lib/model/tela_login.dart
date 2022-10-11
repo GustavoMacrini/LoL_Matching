@@ -3,6 +3,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:lol_matching/model/tela_modelo.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
 class TelaLogin extends StatefulWidget {
@@ -84,7 +85,9 @@ class _TelaLoginState extends State<TelaLogin> {
               child: InkWell(
               customBorder: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),),
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => TelaModelo()));
+              },
                             
               child: Ink.image(
                 
@@ -115,7 +118,9 @@ class _TelaLoginState extends State<TelaLogin> {
       style: ElevatedButton.styleFrom(
         primary: primaryColor,        
         ),
-      onPressed: (){}, 
+      onPressed: (){
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => TelaModelo()));
+      }, 
       child: 
       Text(
         titulo, 

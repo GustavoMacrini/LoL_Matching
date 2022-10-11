@@ -12,7 +12,7 @@ void main() {
     title: 'LoL Matching',
     initialRoute: 't1',
     routes: {
-      't1': (context) => TelaModelo(),
+      't1': (context) => TelaLogin(),
     },
   ));
 }
