@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TelaHome extends StatefulWidget {
   const TelaHome({Key? key}) : super(key: key);
@@ -23,7 +24,6 @@ class _TelaHomeState extends State<TelaHome> {
         child:
         Column(          
           children: [
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

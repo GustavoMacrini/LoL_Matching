@@ -105,9 +105,7 @@ class _TelaPerfilState extends State<TelaPerfil> {
                   Navigator.popUntil(context, (route) => route.isFirst);
                 },
             ),
-
         ]),
-
         )
         ),            
 

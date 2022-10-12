@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:lol_matching/model/tela_equipe.dart';
 import 'package:lol_matching/model/tela_perfil.dart';
 
 import 'new_page.dart';
@@ -18,7 +19,7 @@ class _TelaModeloState extends State<TelaModelo> {
   final List<Widget> _telas = [
     TelaHome(),
     NewPageScreen("Item 2"),
-    NewPageScreen("Item 3"),    
+    TelaEquipe(),    
     TelaPerfil(),
   ];
 

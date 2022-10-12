@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_modelo.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
-class TelaLogin extends StatefulWidget {
-  const TelaLogin({Key? key}) : super(key: key);
+class TelaRegistro extends StatefulWidget {
+  const TelaRegistro({Key? key}) : super(key: key);
 
   @override
-  State<TelaLogin> createState() => _TelaLoginState();
+  State<TelaRegistro> createState() => _TelaRegistroState();
 }
 
-class _TelaLoginState extends State<TelaLogin> {
+class _TelaRegistroState extends State<TelaRegistro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +51,7 @@ class _TelaLoginState extends State<TelaLogin> {
             ),
           
             campoTexto("Senha", true),
+            //FIM DO ARRUMAR
 
             //CRIAR CONTA
             Container(
