@@ -85,28 +85,31 @@ class _TelaRegistroState extends State<TelaRegistro> {
   }
 
 
+  //BOTÃO TROCA DE CONTEXTO
   botao(titulo){
-    return Container(
-      width: 148,
-      height: 58,
-      child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: primaryColor,        
-        ),
-      onPressed: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => TelaModelo()));
-      }, 
-      child: 
-      Text(
-        titulo, 
-        style: TextStyle(
-          color: secondaryColor, 
-          fontSize: 16
+      return Container(
+        width: 148,
+        height: 58,
+        child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: primaryColor,        
           ),
-      ),
-      ),
-      );
-  }
+        onPressed: (){
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => TelaModelo()));
+        }, 
+        child: 
+        Text(
+          titulo, 
+          style: TextStyle(
+            color: secondaryColor, 
+            fontSize: 16
+            ),
+        ),
+        ),
+        );
+    }
+
+  
 
 
   campoTexto(title, bool obscure) {
