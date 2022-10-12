@@ -4,6 +4,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_modelo.dart';
+import 'package:lol_matching/model/tela_registro.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
 class TelaLogin extends StatefulWidget {
@@ -21,7 +22,7 @@ class _TelaLoginState extends State<TelaLogin> {
       body: 
       
         Container(
-        margin: EdgeInsets.fromLTRB(25, 6, 25, 0),          
+        margin: EdgeInsets.fromLTRB(26, 6, 26, 0),          
         child:        
         Column(                  
           children: [ 
@@ -58,7 +59,9 @@ class _TelaLoginState extends State<TelaLogin> {
               child: 
                 Row(children: [
                   TextButton(
-                  onPressed: (){}, 
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => TelaRegistro()));
+                  }, 
                   child: 
                   Text(
                     "Criar conta",
