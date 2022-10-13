@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -34,18 +37,32 @@ class _TelaHomeState extends State<TelaHome> {
                 ),
 
 
-                Container(
-                
+                //Notificação
+                Container(                
                 width: 42,
                 height: 42,
                 decoration: BoxDecoration(
                   color: primaryColor,
                   borderRadius: BorderRadius.circular(5),
-                  ),                             
-                child: Icon(Icons.notifications_outlined,
-                color: Colors.black,            
-                ),
-                )
+                  ),                                             
+                child: IconButton(
+                  icon: Icon(Icons.notifications_outlined ), 
+                  onPressed: (){
+                    //SNACKBAR
+                    final snackBar = SnackBar(
+                  content: const Text('Não há notificações'),
+                  duration: Duration(seconds: 2, milliseconds: 500),
+                  action: SnackBarAction(
+                    label: "Fechar",              
+                    onPressed: () {                
+                    },
+            ),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  color: Colors.black, 
+                  ),                                           
+                ),                                
               ],
             ),
 

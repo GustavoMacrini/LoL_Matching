@@ -64,9 +64,9 @@ class _TelaRegistroState extends State<TelaRegistro> {
           children: [ 
 
             //LOGIN
-            campoTexto("Login", false),
-            
-          
+            campoTexto("Email", false),
+                        
+
             //SENHA
             Container(
               //margin: EdgeInsets.fromLTRB(0, 36, 0, 36),
@@ -84,10 +84,11 @@ class _TelaRegistroState extends State<TelaRegistro> {
       );
   }
 
-
   //BOTÃO TROCA DE CONTEXTO
   botao(titulo){
+    
       return Container(
+        
         width: 148,
         height: 58,
         child: ElevatedButton(
@@ -95,6 +96,16 @@ class _TelaRegistroState extends State<TelaRegistro> {
           primary: primaryColor,        
           ),
         onPressed: (){
+          final snackBar = SnackBar(
+            content: const Text('Bem Vindo!'),
+            duration: Duration(seconds: 2, milliseconds: 500),
+            action: SnackBarAction(
+              label: "Fechar",              
+              onPressed: () {                
+              },
+            ),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => TelaModelo()));
         }, 
         child: 

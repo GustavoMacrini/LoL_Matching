@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
 
@@ -22,7 +19,7 @@ class EquipeWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: 80,
  
-      
+
       decoration: BoxDecoration(
         color: secondaryColor, 
       ),    
@@ -60,14 +57,16 @@ class EquipeWidget extends StatelessWidget {
               ],
             ),
           ),
-
+          
         //CONTAINER LANE E BOTAO
         Container(
           child:
           Row(children: [            
             Container(
               margin: EdgeInsets.only(right: 10),
-              child: Image.asset('lib/assets/lanes/$lane.png',),),
+              child: Image.asset('lib/assets/lanes/$lane.png',),height: 26, width: 26,),
+            
+            //BOTÃO            
             Icon(Icons.close, color: Color.fromRGBO(222, 165, 71, 1),)
             
           ],)

@@ -48,7 +48,7 @@ class _TelaLoginState extends State<TelaLogin> {
             
             Container(
               margin: EdgeInsets.only(bottom: 36),
-              child: campoTexto("Login", false),
+              child: campoTexto("Email", false),
             ),
           
             campoTexto("Senha", true),
@@ -121,7 +121,18 @@ class _TelaLoginState extends State<TelaLogin> {
         primary: primaryColor,        
         ),
       onPressed: (){
+        final snackBar = SnackBar(
+            content: const Text('Bem Vindo!'),
+            duration: Duration(seconds: 2, milliseconds: 500),
+            action: SnackBarAction(
+              label: "Fechar",              
+              onPressed: () {                
+              },
+            ),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
         Navigator.of(context).push(MaterialPageRoute(builder: (context) => TelaModelo()));
+        
       }, 
       child: 
       Text(
@@ -171,5 +182,33 @@ class _TelaLoginState extends State<TelaLogin> {
       ],
       ),
       );
+  }
+}
+
+class SnackBarPage extends StatelessWidget {
+  const SnackBarPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ElevatedButton(
+        onPressed: () {
+          final snackBar = SnackBar(
+            content: const Text('Yay! A SnackBar!'),
+            action: SnackBarAction(
+              label: 'Undo',
+              onPressed: () {
+                // Some code to undo the change.
+              },
+            ),
+          );
+
+          // Find the ScaffoldMessenger in the widget tree
+          // and use it to show a SnackBar.
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        },
+        child: const Text('Show SnackBar'),
+      ),
+    );
   }
 }

@@ -1,10 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 // ignore_for_file: sort_child_properties_last
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:lol_matching/main.dart';
-import 'package:lol_matching/model/equipe_widget.dart';
+import 'package:lol_matching/model/widgets/equipe_widget.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
 class TelaEquipe extends StatefulWidget {
@@ -45,10 +42,11 @@ class _TelaEquipeState extends State<TelaEquipe> {
             Container(              
               child: Column(children: [
               EquipeWidget("Agente Pleakley", "top"),
-              EquipeWidget("Agente Pleakley", "jungle"),
-              EquipeWidget("Agente Pleakley", "mid"),
-              EquipeWidget("Agente Pleakley", "adc"),
-              EquipeWidget("Agente Pleakley", "sup"),]),
+              EquipeWidget("Kindred Kawaii", "jungle"),
+              EquipeWidget("Madeira Gustavo", "mid"),
+              EquipeWidget("DrHansChucrute", "adc"),
+              EquipeWidget("Chwn", "sup"),
+              ]),
             ),
 
 

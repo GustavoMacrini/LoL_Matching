@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_equipe.dart';
 import 'package:lol_matching/model/tela_perfil.dart';
+import 'package:lol_matching/model/tela_pesquisa.dart';
 
 import 'new_page.dart';
 import 'tela_home.dart';
@@ -18,7 +19,7 @@ class _TelaModeloState extends State<TelaModelo> {
   int _indiceAtual = 0; // Variável para controlar o índice das telas
   final List<Widget> _telas = [
     TelaHome(),
-    NewPageScreen("Item 2"),
+    TelaPesquisa(),
     TelaEquipe(),    
     TelaPerfil(),
   ];
