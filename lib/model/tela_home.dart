@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lol_matching/model/widgets/historico_widget.dart';
 
 class TelaHome extends StatefulWidget {
   const TelaHome({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class _TelaHomeState extends State<TelaHome> {
               ],
             ),
 
-
+            //TEXTO SUAS ULTIMAS PARTIDAS
             Container(
               margin: EdgeInsets.fromLTRB(0, 70, 0, 10),
               child:             
@@ -79,7 +80,27 @@ class _TelaHomeState extends State<TelaHome> {
                 ),
                 ),
               ],
-            ),)
+            ),),
+
+            //HISTORICO
+
+            HistoricoWidget(),
+            HistoricoWidget(),
+            HistoricoWidget(),
+            HistoricoWidget(),
+
+
+            Container(
+              child: 
+              Column(
+                children: [
+                  
+
+                  
+                ]),),
+
+
+
           ],
         ),
       ),
