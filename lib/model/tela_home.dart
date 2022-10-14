@@ -5,9 +5,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/historico_widget.dart';
 
+final lista = <HistoricoWidget> [
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),
+  HistoricoWidget(),  
+  ];
+
 class TelaHome extends StatefulWidget {
+  
   const TelaHome({Key? key}) : super(key: key);
 
   @override
@@ -82,26 +105,27 @@ class _TelaHomeState extends State<TelaHome> {
               ],
             ),),
 
+
+
             //HISTORICO
+            Expanded(
+              flex: 10,
+              child: ListView.separated(                            
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return Card(
+                  color: secondaryColor,
+                  child: lista[index],
+                );
+              }, 
+              itemCount: lista.length, 
+              separatorBuilder: (BuildContext context, int index) => const Divider(),
+                     
+              
+              ),
+            ),
 
-            HistoricoWidget(),
-            HistoricoWidget(),
-            HistoricoWidget(),
-            HistoricoWidget(),
-
-
-            Container(
-              child: 
-              Column(
-                children: [
-                  
-
-                  
-                ]),),
-
-
-
-          ],
+              ],
         ),
       ),
 
