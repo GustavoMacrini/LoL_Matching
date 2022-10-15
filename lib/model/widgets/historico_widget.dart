@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_home.dart';
 
 class HistoricoWidget extends StatelessWidget {
- 
+  
+  final String champ;
   final String lane;
   final String kda;
   final int farm;
   final bool vitoria;
 
   const HistoricoWidget(
-    this.lane, this.kda, this.farm, this.vitoria,
+    this.champ, this.lane, this.kda, this.farm, this.vitoria,
     {Key? key}) : super(key: key);
 
   @override
@@ -31,7 +32,7 @@ class HistoricoWidget extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(right: 10),
                   child: 
-                  Image(image: NetworkImage("https://ddragon.leagueoflegends.com/cdn/12.19.1/img/profileicon/4650.png"), width: 40, height: 40,),
+                  Image(image: NetworkImage("http://ddragon.leagueoflegends.com/cdn/12.19.1/img/champion/$champ.png"), width: 40, height: 40,),
                 ),
 
                 //TEXTO KDA E VITORIA

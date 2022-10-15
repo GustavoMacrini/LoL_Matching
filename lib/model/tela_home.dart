@@ -6,15 +6,15 @@ import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/historico_widget.dart';
 
 final lista = <HistoricoWidget> [
-  HistoricoWidget("top", "17/02/09", 123, false),
-  HistoricoWidget("mid", "25/10/2", 256, true),
-  HistoricoWidget("jungle", "0/10/3", 60, false),
-  HistoricoWidget("adc", "26/03/14", 320, true),
-  HistoricoWidget("sup", "3/7/19", 30, true),
-  HistoricoWidget("top", "17/02/09", 123, false),
-  HistoricoWidget("top", "17/02/09", 123, false),
-  HistoricoWidget("top", "17/02/09", 123, false),
-   
+  HistoricoWidget("Aatrox","top", "17/02/09", 123, false),
+  HistoricoWidget("Syndra", "mid", "25/10/2", 256, true),
+  HistoricoWidget("Khazix", "jungle", "0/10/3", 60, false),
+  HistoricoWidget("Jinx", "adc", "26/03/14", 320, true),
+  HistoricoWidget("Lulu", "sup", "3/7/19", 30, true),
+  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
+  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
+  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
+     
   ];
 
 class TelaHome extends StatefulWidget {
