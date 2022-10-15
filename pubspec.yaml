@@ -66,6 +66,7 @@ flutter:
    - lib/assets/devpic/
    - lib/assets/lanes/
    - lib/assets/icons/
+   - lib/assets/logo/
 
   #   - images/a_dot_ham.jpeg
 

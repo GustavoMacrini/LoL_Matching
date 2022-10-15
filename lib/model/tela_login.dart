@@ -31,19 +31,20 @@ class _TelaLoginState extends State<TelaLogin> {
           Container(
             margin: EdgeInsets.fromLTRB(0, 27, 0, 35),
             child:
-            Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "LoL Matching", 
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: primaryColor,
-                ),
-              ),
-            ],
-            ), 
+            // Row(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            // children: [
+            //   Text(
+            //     "LoL Matching", 
+            //     style: TextStyle(
+            //       fontSize: 32,
+            //       fontWeight: FontWeight.bold,
+            //       color: primaryColor,
+            //     ),
+            //   ),
+            // ],
+            // ), 
+            Image(image: AssetImage("lib/assets/logo/logo_app2.png"), height: 100,)
             ),
             
             Container(

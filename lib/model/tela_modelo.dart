@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_equipe.dart';
 import 'package:lol_matching/model/tela_perfil.dart';
 import 'package:lol_matching/model/tela_pesquisa.dart';
-
-import 'new_page.dart';
 import 'tela_home.dart';
 
 class TelaModelo extends StatefulWidget {
