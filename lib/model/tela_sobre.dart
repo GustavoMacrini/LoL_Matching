@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:gif/gif.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
 class TelaSobre extends StatefulWidget {
@@ -36,10 +37,13 @@ class _TelaSobreState extends State<TelaSobre> {
     body: 
     
     Container(
-      margin: EdgeInsets.fromLTRB(45, 30, 45, 0),
+      margin: EdgeInsets.fromLTRB(45, 30, 45, 30),
       child: 
-        Column(children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
 
+          //TITULO DESENVOLVEDORES
           Container(
             margin: EdgeInsets.only(bottom: 30),
             child: Row(
@@ -54,56 +58,60 @@ class _TelaSobreState extends State<TelaSobre> {
           ],),),
           
 
-          //AVATAR GUSTAVO
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [            
-            CircleAvatar(
-              backgroundColor: primaryColor,
-              radius: 40,
-              child: CircleAvatar(
-                radius: 36.0,
-                backgroundImage: AssetImage("lib/assets/devPic/foto_gustavo.jpeg"),
-            ),
-            ),
-            
+          //NOME E FOTO DESENVOLVEDORES
+          Container(child: Column(children: [
+
+            //AVATAR GUSTAVO
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [            
+              CircleAvatar(
+                backgroundColor: primaryColor,
+                radius: 40,
+                child: CircleAvatar(
+                  radius: 36.0,
+                  backgroundImage: AssetImage("lib/assets/devPic/foto_gustavo.jpeg"),
+              ),
+              ),
+              
+              Container(
+                margin: EdgeInsets.only(left: 26),
+                child: Text("Gustavo Godencio",
+                style: TextStyle(
+                  color: primaryColor,
+                  fontSize: 20
+                ),  
+              ),)
+
+            ],),
+
+            //AVATAR RAUL
             Container(
-              margin: EdgeInsets.only(left: 26),
-              child: Text("Gustavo Godencio",
-              style: TextStyle(
-                color: primaryColor,
-                fontSize: 20
-              ),  
-            ),)
+              margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
 
-          ],),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  backgroundColor: primaryColor,
+                  radius: 40,
+                  child: CircleAvatar(
+                    radius: 36.0,
+                    backgroundImage: AssetImage("lib/assets/devPic/foto_raul.jpg"),
+                ),
+                ),
 
-        //AVATAR RAUL
-        Container(
-          margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-
-          child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            CircleAvatar(
-              backgroundColor: primaryColor,
-              radius: 40,
-              child: CircleAvatar(
-                radius: 36.0,
-                backgroundImage: AssetImage("lib/assets/devPic/foto_raul.jpg"),
-            ),
-            ),
-            
-
-            Container(
-              margin: EdgeInsets.only(left: 26),
-              child: Text("Raul Bernardo",
-              style: TextStyle(
-                color: primaryColor,
-                fontSize: 20
-              ),  
-            ),
-            ),
+                Container(
+                  margin: EdgeInsets.only(left: 26),
+                  child: Text("Raul Bernardo",
+                  style: TextStyle(
+                    color: primaryColor,
+                    fontSize: 20
+                  ),  
+                ),
+                ),
+              ]          
+              ),),
           
         ],)),
 
@@ -126,6 +134,13 @@ class _TelaSobreState extends State<TelaSobre> {
             ),),
 
           ],),),
+
+        
+        //GIF DANCE KATARINA
+        Gif(
+          image: AssetImage("lib/assets/icons/dance_katarina.gif",), width:80, height: 80 ,
+          autostart: Autostart.loop,
+        )
     
         
         ]),      

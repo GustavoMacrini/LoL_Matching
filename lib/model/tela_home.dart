@@ -2,31 +2,19 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/historico_widget.dart';
 
 final lista = <HistoricoWidget> [
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),
-  HistoricoWidget(),  
+  HistoricoWidget("top", "17/02/09", 123, false),
+  HistoricoWidget("mid", "25/10/2", 256, true),
+  HistoricoWidget("jungle", "0/10/3", 60, false),
+  HistoricoWidget("adc", "26/03/14", 320, true),
+  HistoricoWidget("sup", "3/7/19", 30, true),
+  HistoricoWidget("top", "17/02/09", 123, false),
+  HistoricoWidget("top", "17/02/09", 123, false),
+  HistoricoWidget("top", "17/02/09", 123, false),
+   
   ];
 
 class TelaHome extends StatefulWidget {
@@ -114,7 +102,7 @@ class _TelaHomeState extends State<TelaHome> {
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return Card(
-                  color: secondaryColor,
+                  color: secondaryColor,                  
                   child: lista[index],
                 );
               }, 

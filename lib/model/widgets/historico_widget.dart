@@ -1,16 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:lol_matching/main.dart';
 import 'package:lol_matching/model/tela_home.dart';
 
 class HistoricoWidget extends StatelessWidget {
  
-  // var kda;
-  // var lane;
-  // var farm;
-  // var vitoria;
-  const HistoricoWidget({Key? key}) : super(key: key);
+  final String lane;
+  final String kda;
+  final int farm;
+  final bool vitoria;
+
+  const HistoricoWidget(
+    this.lane, this.kda, this.farm, this.vitoria,
+    {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +43,18 @@ class HistoricoWidget extends StatelessWidget {
                         fontSize:20 
                       ),
                     ),
-                    Text("Vitória",                   
+                    
+                    //CONDICIONAL PARA MOSTRAR VITORIA OU DERROTA
+                    vitoria ? Text("Vitória",                   
                       style: TextStyle(
                         color: Colors.green,
                         fontSize: 20
-                    ),)
+                    ),) : Text("Derrota", 
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 20
+                            ),)
+
                 ],),
               ],
             ),
@@ -56,7 +65,7 @@ class HistoricoWidget extends StatelessWidget {
                 Column(
                   children: [
                     //KDA
-                    Text("17/02/09", 
+                    Text(kda, 
                       style: TextStyle(
                         color: primaryColor,
                         fontSize: 20
@@ -66,7 +75,7 @@ class HistoricoWidget extends StatelessWidget {
                     Row(
                       //mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                      Text("322", 
+                      Text("$farm", 
                         style: TextStyle(
                           color: Color.fromRGBO(151, 135, 93, 1),
                           fontSize: 18
@@ -83,7 +92,7 @@ class HistoricoWidget extends StatelessWidget {
                 Container(  
                   margin: EdgeInsets.only(left: 20),                
                   child: 
-                  Image(image: AssetImage("lib/assets/lanes/top.png"), height: 30, width: 30),
+                  Image(image: AssetImage("lib/assets/lanes/$lane.png"), height: 26, width: 26),
                 ),
               ],
             )
