@@ -1,10 +1,16 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 // ignore_for_file: prefer_const_literals_to_create_immutables
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_modelo.dart';
 import 'package:lol_matching/model/variaveis.dart';
+import 'package:lol_matching/model/widgets/campo_texto.dart';
+
+final lista = <CampoTextoWidget> [
+  CampoTextoWidget("Email", false),
+  CampoTextoWidget("Nome", false),
+  CampoTextoWidget("Senha", true),
+  CampoTextoWidget("Confirar senha", true),
+];
 
 class TelaRegistro extends StatefulWidget {
   const TelaRegistro({Key? key}) : super(key: key);
@@ -58,28 +64,33 @@ class _TelaRegistroState extends State<TelaRegistro> {
       
         Container(
         margin: EdgeInsets.fromLTRB(26, 40, 26, 80),          
-        child:        
+        child:    
+
         Column(   
           mainAxisAlignment: MainAxisAlignment.spaceBetween,               
           children: [ 
 
-            //LOGIN
-            campoTexto("Email", false),
-                        
+            //EMAIL
+            CampoTextoWidget("Email", false),
+
+            //NOME
+            CampoTextoWidget("Nome", false),      
 
             //SENHA
             Container(
               //margin: EdgeInsets.fromLTRB(0, 36, 0, 36),
-              child: campoTexto("Senha", true),
+              child: CampoTextoWidget("Senha", true),
             ),
 
             //CONFIRMAR SENHA
-            campoTexto("Confirmar senha", true), 
-
+            CampoTextoWidget("Confirmar senha", true), 
+  
             botao("CRIAR"),
   
         ],
         ),
+
+
         ),
       );
   }
@@ -119,44 +130,4 @@ class _TelaRegistroState extends State<TelaRegistro> {
         ),
         );
     }
-
-  
-
-
-  campoTexto(title, bool obscure) {
-    return Container(
-      child: 
-      Column(
-        children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(title,
-             style: TextStyle(
-              fontSize: 20,
-              color: primaryColor,
-              ),
-            ),
-          ],
-          ),
-
-        TextFormField(        
-        style: 
-        TextStyle(
-          fontSize: 28,
-        ),
-        decoration: InputDecoration(
-          fillColor: Colors.white,
-          filled: true,
-          border: 
-          OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),          
-        ),
-        obscureText: obscure, 
-      ),
-      ],
-      ),
-      );
-  }
 }

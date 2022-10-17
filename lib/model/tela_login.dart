@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/tela_modelo.dart';
 import 'package:lol_matching/model/tela_registro.dart';
 import 'package:lol_matching/model/variaveis.dart';
+import 'package:lol_matching/model/widgets/campo_texto.dart';
 
 class TelaLogin extends StatefulWidget {
   const TelaLogin({Key? key}) : super(key: key);
@@ -49,10 +50,10 @@ class _TelaLoginState extends State<TelaLogin> {
             
             Container(
               margin: EdgeInsets.only(bottom: 36),
-              child: campoTexto("Email", false),
+              child: CampoTextoWidget("Email", false),
             ),
           
-            campoTexto("Senha", true),
+            CampoTextoWidget("Senha", true),
 
             //CRIAR CONTA
             Container(
@@ -147,69 +148,4 @@ class _TelaLoginState extends State<TelaLogin> {
       );
   }
 
-
-  campoTexto(title, bool obscure) {
-    return Container(
-      child: 
-      Column(
-        children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(title,
-             style: TextStyle(
-              fontSize: 20,
-              color: primaryColor,
-              ),
-            ),
-          ],
-          ),
-
-        TextFormField(        
-        style: 
-        TextStyle(
-          fontSize: 28,
-        ),
-        decoration: InputDecoration(
-          fillColor: Colors.white,
-          filled: true,
-          border: 
-          OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),          
-        ),
-        obscureText: obscure, 
-      ),
-      ],
-      ),
-      );
-  }
-}
-
-class SnackBarPage extends StatelessWidget {
-  const SnackBarPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: () {
-          final snackBar = SnackBar(
-            content: const Text('Yay! A SnackBar!'),
-            action: SnackBarAction(
-              label: 'Undo',
-              onPressed: () {
-                // Some code to undo the change.
-              },
-            ),
-          );
-
-          // Find the ScaffoldMessenger in the widget tree
-          // and use it to show a SnackBar.
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        },
-        child: const Text('Show SnackBar'),
-      ),
-    );
-  }
-}
+ }
