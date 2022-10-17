@@ -80,7 +80,7 @@ class _TelaHomeState extends State<TelaHome> {
 
             //TEXTO SUAS ULTIMAS PARTIDAS
             Container(
-              margin: EdgeInsets.fromLTRB(0, 70, 0, 10),
+              margin: EdgeInsets.fromLTRB(0, 40, 0, 10),
               child:             
               Row(
               children: [
