@@ -6,14 +6,14 @@ import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/historico_widget.dart';
 
 final lista = <HistoricoWidget> [
-  HistoricoWidget("Aatrox","top", "17/02/09", 123, false),
+  HistoricoWidget("Aatrox","top", "17/2/09", 123, false),
   HistoricoWidget("Syndra", "mid", "25/10/2", 256, true),
   HistoricoWidget("Khazix", "jungle", "0/10/3", 60, false),
-  HistoricoWidget("Jinx", "adc", "26/03/14", 320, true),
+  HistoricoWidget("Jinx", "adc", "26/3/14", 320, true),
   HistoricoWidget("Lulu", "sup", "3/7/19", 30, true),
-  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
-  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
-  HistoricoWidget("Aatrox", "top", "17/02/09", 123, false),
+  HistoricoWidget("Aatrox", "top", "17/2/09", 123, false),
+  HistoricoWidget("Aatrox", "top", "17/2/09", 123, false),
+  HistoricoWidget("Aatrox", "top", "17/2/09", 123, false),
      
   ];
 

@@ -41,11 +41,11 @@ class _TelaEquipeState extends State<TelaEquipe> {
             //MEMBROS EQUIPE
             Container(              
               child: Column(children: [
-              EquipeWidget("Agente Pleakley", "top"),
-              EquipeWidget("Kindred Kawaii", "jungle"),
-              EquipeWidget("Madeira Gustavo", "mid"),
-              EquipeWidget("DrHansChucrute", "adc"),
-              EquipeWidget("Chwn", "sup"),
+              EquipeWidget("Agente Pleakley", "top", 685),
+              EquipeWidget("Kindred Kawaii", "jungle", 4650),
+              EquipeWidget("Madeira Gustavo", "mid", 3248),
+              EquipeWidget("DrHansChucrute", "adc", 3249),
+              EquipeWidget("Chwn", "sup", 1234),
               ]),
             ),
 

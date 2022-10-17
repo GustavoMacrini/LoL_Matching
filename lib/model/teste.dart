@@ -1,23 +1,46 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
-class DropPageChamp extends StatelessWidget {
-  final dropValue = ValueNotifier('');
-  final dropOpcoes = [
-    'Aatrox',
-    'Syndra',
-    'Khazix',
-    'Ziggs',
-    'Gragas',
-    ];
-  
-    DropPageChamp(
-      {Key? key}) : super(key: key);
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:lol_matching/model/campeao.dart';
+
+class MyWidget extends StatefulWidget {
+    
+  MyWidget({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {     
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    List<Campeao> listaChamp = [];
+
+    //CARREGAR DADOS
+    carregarDados() async {
+    final String a = await rootBundle.loadString(
+      'lib/data/paises.json',
+    );
+    final dynamic d = await json.decode(a);
+    setState(() {
+      d.forEach((item) {
+        listaChamp.add(Campeao.fromJson(item));
+      });
+    });
+  }
+
+    final dropValue = ValueNotifier('');
     return Container(
       child: ValueListenableBuilder(
         valueListenable: dropValue, builder: ((context, String value, _) {
+          final dropOpcoes = [
+          'Aatrox',
+          'Syndra',
+          'Khazix',
+          'Ziggs',
+          'Gragas',
+          ];
           return SizedBox(
             width: 230,
             child: DropdownButtonFormField<String>(
@@ -52,4 +75,5 @@ class DropPageChamp extends StatelessWidget {
         } ),)
     );
   }
-}
+
+  }
