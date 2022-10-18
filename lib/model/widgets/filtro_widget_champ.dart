@@ -22,7 +22,7 @@ class DropPageChamp extends StatelessWidget {
             width: 230,
             child: DropdownButtonFormField<String>(
               isExpanded: true,
-              hint: const Text('Selecione a opção'),
+              hint: const Text('Selecionar campeão'),
               decoration:               
               InputDecoration(
                 border: OutlineInputBorder(
