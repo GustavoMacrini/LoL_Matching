@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lol_matching/model/tela_login.dart';
-import 'package:lol_matching/model/tela_modelo.dart';
-
-import 'model/tela_perfil.dart';
-
+import 'package:lol_matching/view/tela_login.dart';
 
 void main() {
   runApp(

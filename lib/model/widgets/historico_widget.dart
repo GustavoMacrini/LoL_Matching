@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:lol_matching/model/tela_home.dart';
+import 'package:lol_matching/model/variaveis.dart';
 
 class HistoricoWidget extends StatelessWidget {
   

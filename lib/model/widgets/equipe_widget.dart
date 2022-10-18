@@ -37,7 +37,7 @@ class EquipeWidget extends StatelessWidget {
               //Borda
               CircleAvatar(
                 radius: 32.0,
-                backgroundColor: Color.fromRGBO(222, 165, 71, 1),
+                backgroundColor: primaryColor,
                 child: 
                 //Foto
                 CircleAvatar(
@@ -68,7 +68,7 @@ class EquipeWidget extends StatelessWidget {
               child: Image.asset('lib/assets/lanes/$lane.png',),height: 26, width: 26,),
             
             //BOTÃO            
-            Icon(Icons.close, color: Color.fromRGBO(222, 165, 71, 1),)
+            Icon(Icons.close, color: primaryColor,)
             
           ],)
         ),

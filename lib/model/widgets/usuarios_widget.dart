@@ -2,7 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:lol_matching/model/tela_home.dart';
+import 'package:lol_matching/model/variaveis.dart';
 
 class UsuarioWidget extends StatelessWidget {
   final int icon;
@@ -15,7 +15,7 @@ class UsuarioWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+      margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
       width: 250,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,11 +24,12 @@ class UsuarioWidget extends StatelessWidget {
           //CONTAINER ICONE USUARIO
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
               //Borda
               CircleAvatar(
                 radius: 32.0,
-                backgroundColor: Color.fromRGBO(222, 165, 71, 1),
+                backgroundColor: primaryColor,
                 child: 
                 //Foto
                 CircleAvatar(
