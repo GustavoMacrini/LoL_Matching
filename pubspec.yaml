@@ -67,6 +67,7 @@ flutter:
    - lib/assets/lanes/
    - lib/assets/icons/
    - lib/assets/logo/
+   - lib/assets/maestria/
 
   #   - images/a_dot_ham.jpeg
 

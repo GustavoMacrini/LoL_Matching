@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/filtro_widget_champ.dart';
 import 'package:lol_matching/model/widgets/filtro_widget_tipo.dart';
+import 'package:lol_matching/model/widgets/usuarios_widget.dart';
 
-class TelaPesquisa extends StatefulWidget {
-   
+class TelaPesquisa extends StatefulWidget {   
       
   TelaPesquisa({Key? key}) : super(key: key);
 
@@ -22,7 +22,7 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
       body:
       
       Container(
-        margin: EdgeInsets.fromLTRB(30, 30, 30, 0),
+        margin: EdgeInsets.fromLTRB(30, 30, 30, 30),
         child: Column(          
           children: [
 
@@ -33,14 +33,29 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
                 Column(
                   children: [
                     DropPageChamp(),
-                    DropPageFiltro(),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: DropPageFiltro(),)
                   ],
                 ),
               ],
             ),
 
             //BOTAO
-            botao("PESQUISAR"),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 30, 0, 30),  
+              child: botao("PESQUISAR"),
+            ),
+
+            //LINHA DE DIVISAO
+            Divider(
+              color: primaryColor,
+              thickness: 2,
+            ),
+
+            UsuarioWidget(4568, "Kindred Kawaii", 536000),
+            UsuarioWidget(4568, "Kindred Kawaii", 536000),
+            UsuarioWidget(4568, "Kindred Kawaii", 536000),
 
 
         ]),
