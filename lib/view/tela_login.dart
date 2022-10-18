@@ -70,7 +70,6 @@ class _TelaLoginState extends State<TelaLogin> {
       );
   }
 
-
   botao(titulo){
     return Container(
       width: 148,

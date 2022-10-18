@@ -48,7 +48,8 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
                     DropPageChamp(),
                     Container(
                       margin: EdgeInsets.only(top: 20),
-                      child: DropPageFiltro(),)
+                      child: DropPageFiltro(),
+                    )
                   ],
                 ),
               ],
@@ -70,17 +71,15 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
             Expanded(              
               flex: 10,
               child: ListView.separated(                            
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return Card(                  
-                  color: secondaryColor,                  
-                  child: listaUsuario[index],
-                );
-              }, 
-              itemCount: listaUsuario.length, 
-              separatorBuilder: (BuildContext context, int index) => const Divider(),
-                     
-              
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return Card(                  
+                    color: secondaryColor,                  
+                    child: listaUsuario[index],
+                  );
+                }, 
+                itemCount: listaUsuario.length, 
+                separatorBuilder: (BuildContext context, int index) => const Divider(),                                   
               ),
             ),
 
@@ -93,21 +92,22 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
     return Container(
       width: 120,
       height: 38,
-      child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: primaryColor,        
-        ),
-      onPressed: (){               
-      }, 
       child: 
-      Text(
-        titulo, 
-        style: TextStyle(
-          color: secondaryColor, 
-          fontSize: 16
+      ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: primaryColor,        
           ),
+        onPressed: (){               
+        }, 
+        child: 
+        Text(
+          titulo, 
+          style: TextStyle(
+            color: secondaryColor, 
+            fontSize: 16
+          ),
+        ),
       ),
-      ),
-      );
+    );
   }
 }

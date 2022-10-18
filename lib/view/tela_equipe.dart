@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace
 // ignore_for_file: sort_child_properties_last
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/widgets/equipe_widget.dart';

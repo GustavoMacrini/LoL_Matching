@@ -101,8 +101,7 @@ class _TelaMenuState extends State<TelaMenu> {
         selectedItemColor: Colors.black,        
         showSelectedLabels: false,
         showUnselectedLabels: false,     
-        
-        
+                
       ),
     );
   }

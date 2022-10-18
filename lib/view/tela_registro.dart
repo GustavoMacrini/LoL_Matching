@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:lol_matching/view/tela_menu.dart';
 import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/campo_texto.dart';
 
@@ -57,8 +56,7 @@ class _TelaRegistroState extends State<TelaRegistro> {
 
 
       backgroundColor: secondaryColor,
-      body: 
-      
+      body:       
         Container(
         margin: EdgeInsets.fromLTRB(26, 40, 26, 80),          
         child:    
@@ -75,7 +73,6 @@ class _TelaRegistroState extends State<TelaRegistro> {
 
             //SENHA
             Container(
-              //margin: EdgeInsets.fromLTRB(0, 36, 0, 36),
               child: CampoTextoWidget("Senha", true),
             ),
 
@@ -92,8 +89,7 @@ class _TelaRegistroState extends State<TelaRegistro> {
   //BOTÃO TROCA DE CONTEXTO
   botao(titulo){
     
-      return Container(
-        
+      return Container(        
         width: 148,
         height: 58,
         child: ElevatedButton(
@@ -102,23 +98,23 @@ class _TelaRegistroState extends State<TelaRegistro> {
           ),
         onPressed: (){
           final snackBar = SnackBar(
-            content: const Text('Bem Vindo!'),
+            content: const Text('Conta criada com sucesso!'),
             duration: Duration(seconds: 2, milliseconds: 500),
             action: SnackBarAction(
               label: "Fechar",              
-              onPressed: () {                
-              },
+              onPressed: () {},
             ),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => TelaMenu()));
+          Navigator.of(context).pop();
         }, 
         child: 
         Text(titulo, 
           style: TextStyle(
             color: secondaryColor, 
             fontSize: 16
-          ),),
+          ),
+        ),
         ),
         );
     }

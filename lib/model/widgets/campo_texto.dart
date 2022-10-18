@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
@@ -27,7 +28,7 @@ class CampoTextoWidget extends StatelessWidget {
           ),
 
         TextFormField(        
-        style: 
+        style:         
         TextStyle(
           fontSize: 28,
         ),

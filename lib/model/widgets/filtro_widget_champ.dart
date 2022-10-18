@@ -4,11 +4,32 @@ class DropPageChamp extends StatelessWidget {
   final dropValue = ValueNotifier('');
   final dropOpcoes = [
     'Aatrox',
-    'Syndra',
-    'Khazix',
-    'Ziggs',
+    'Blitzcrank',
+    'Caitlyn',
+    'Darius',
+    'Ekko',
+    'Fiora',
     'Gragas',
-    ];
+    'Hecarim',
+    'Illaoi',
+    'Janna',
+    'Kindred',
+    'Leona',
+    'Malphite',
+    'Nami',
+    'Olaf',
+    'Pantheon',
+    'Qiyana',
+    'Rakan',
+    'Syndra',
+    'Taliyah',
+    'Udyr',
+    'Varus',
+    'Warwick',
+    'Xayah',
+    'Yasuo',
+    'Ziggs',    
+  ];
   
     DropPageChamp(
       {Key? key}) : super(key: key);

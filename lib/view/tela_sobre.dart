@@ -34,8 +34,7 @@ class _TelaSobreState extends State<TelaSobre> {
     ),
 
     backgroundColor: secondaryColor,
-    body: 
-    
+    body:     
     Container(
       margin: EdgeInsets.fromLTRB(45, 30, 45, 30),
       child: 
@@ -53,14 +52,16 @@ class _TelaSobreState extends State<TelaSobre> {
               style: TextStyle(
                 color: primaryColor,
                 fontSize: 20
-              ),),
+              ),
+            ),
 
           ],),),
           
 
           //NOME E FOTO DESENVOLVEDORES
-          Container(child: Column(children: [
-
+          Container(
+            child: 
+            Column(children: [
             //AVATAR GUSTAVO
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -111,10 +112,8 @@ class _TelaSobreState extends State<TelaSobre> {
                 ),
                 ),
               ]          
-              ),),
-          
+              ),),          
         ],)),
-
 
         //TEXTO SOBRE O PROJETO
         Container(          
@@ -127,21 +126,19 @@ class _TelaSobreState extends State<TelaSobre> {
               child: Text("Desenvolvemos esse aplicativo formador de equipes com a intenção de melhorar a experiência de jogadores de League of Legends.",
             style: TextStyle(
                 color: primaryColor,
-                fontSize: 20
-                
+                fontSize: 20                
             ),
             textAlign: TextAlign.start,
             ),),
 
           ],),),
-
         
         //GIF DANCE KATARINA
         Gif(
           image: AssetImage("lib/assets/icons/dance_katarina.gif",), width:80, height: 80 ,
           autostart: Autostart.loop,
         )
-
+        
         ]),),
     );
   }

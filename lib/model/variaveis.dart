@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 var primaryColor = Color.fromRGBO(222, 165, 71, 1);

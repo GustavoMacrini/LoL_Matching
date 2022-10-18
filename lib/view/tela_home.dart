@@ -25,8 +25,6 @@ class TelaHome extends StatefulWidget {
   State<TelaHome> createState() => _TelaHomeState();
 }
 
-//var nickname = "Kindred Kawaii";
-//var primaryColor = Color.fromRGBO(222, 165, 71, 1);
 
 class _TelaHomeState extends State<TelaHome> {
   @override
@@ -112,7 +110,6 @@ class _TelaHomeState extends State<TelaHome> {
               ],
         ),
       ),
-
       
     );
   }

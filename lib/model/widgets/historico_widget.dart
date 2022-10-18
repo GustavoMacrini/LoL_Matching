@@ -74,7 +74,6 @@ class HistoricoWidget extends StatelessWidget {
 
                     //FARM                
                     Row(
-                      //mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                       Text("$farm", 
                         style: TextStyle(

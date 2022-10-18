@@ -1,11 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
-
-
 import 'package:flutter/material.dart';
 import 'package:lol_matching/view/tela_sobre.dart';
 import 'package:lol_matching/model/variaveis.dart';
-
 
 class TelaPerfil extends StatefulWidget {
   const TelaPerfil({Key? key}) : super(key: key);
@@ -113,16 +110,12 @@ class _TelaPerfilState extends State<TelaPerfil> {
       backgroundColor: secondaryColor,
       body:       
       Container(
-        //margin: EdgeInsets.only(top: 30),
         child:         
         Column(
-          
           children: [                      
-
             //FOTO PERFIL
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              
+              mainAxisAlignment: MainAxisAlignment.center,              
               children: [                  
                   //Borda
                   CircleAvatar(
@@ -155,7 +148,6 @@ class _TelaPerfilState extends State<TelaPerfil> {
                 ),
               ],
             ),
-
             ),
 
             //DISCORD USUARIO
@@ -191,30 +183,31 @@ class _TelaPerfilState extends State<TelaPerfil> {
                     margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: 
                     Image(image: NetworkImage("http://ddragon.leagueoflegends.com/cdn/12.19.1/img/champion/Kindred.png"),
-                    height: 45, 
-                    width: 45,
-                  ),
+                      height: 45, 
+                      width: 45,
+                    ),
                   ),
                   Image(image: NetworkImage("http://ddragon.leagueoflegends.com/cdn/12.19.1/img/champion/Syndra.png"),
-                  height: 45,
-                  width: 45,
+                    height: 45,
+                    width: 45,
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: Image(image: NetworkImage("http://ddragon.leagueoflegends.com/cdn/12.19.1/img/champion/Khazix.png"),
-                    height: 45,
-                    width: 45,
-                  )
+                    child: 
+                    Image(image: NetworkImage("http://ddragon.leagueoflegends.com/cdn/12.19.1/img/champion/Khazix.png"),
+                      height: 45,
+                      width: 45,
+                    )
                   ),
                   Icon(Icons.edit, 
-                  color: primaryColor,
+                    color: primaryColor,
                   )
                 ],
               ),
             ),
           
 
-            // RANKING
+            //RANKING
             Column(
               children: [
                 Row(
@@ -234,16 +227,15 @@ class _TelaPerfilState extends State<TelaPerfil> {
                       style: TextStyle(
                         color: primaryColor,
                         fontSize: 20,
-                        ),),
+                      ),),
 
                       Text("${pdl} PDL", 
                       style: TextStyle(
                         color: primaryColor,
                         fontSize: 20,
-                        ),),
+                      ),),
                     ],
-                  ),
-                  
+                  ),                  
                 ],),
 
                 Container(
