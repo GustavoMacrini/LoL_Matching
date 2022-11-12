@@ -18,7 +18,7 @@ class LoginController {
         "nome": nome,
         "nickname": nickname,
       });
-      sucesso(context, 'Usuário criado com sucesso.');
+      sucesso(context, 'Conta criada com sucesso!');
       Navigator.pop(context);
     }).catchError((e) {
       switch (e.code) {
@@ -41,8 +41,8 @@ class LoginController {
     FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email, password: senha)
         .then((res) {
-      sucesso(context, 'Usuário autenticado com sucesso.');
-      Navigator.pushReplacementNamed(context, 'principal');
+      sucesso(context, 'Bem Vindo!');
+      Navigator.pushReplacementNamed(context, 'menu');
     }).catchError((e) {
       switch (e.code) {
         case 'invalid-email':
@@ -87,7 +87,7 @@ class LoginController {
         .then(
       (q) {
         if (q.docs.isNotEmpty) {
-          res = q.docs[0].data()['nome'];
+          res = q.docs[0].data()['nickname'];
         } else {
           res = "";
         }
