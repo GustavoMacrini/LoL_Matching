@@ -4,12 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:lol_matching/model/variaveis.dart';
 import 'package:lol_matching/model/widgets/campo_texto.dart';
 
-final lista = <CampoTextoWidget> [
-  CampoTextoWidget("Email", false),
-  CampoTextoWidget("Nome", false),
-  CampoTextoWidget("Senha", true),
-  CampoTextoWidget("Confirar senha", true),
-];
+import '../controller/login_controller.dart';
+
+// final lista = <CampoTextoWidget> [
+//  CampoTextoWidget("Email", false,txtEmail),
+//  CampoTextoWidget("Nome", false, txtNome),
+//  CampoTextoWidget("Nickname", false, txtNickname),
+//  CampoTextoWidget("Senha", true, txtSenha),
+//  CampoTextoWidget("Confirmar senha", true, txtConfSenha),
+// ];
+
+var txtNome = TextEditingController();
+var txtEmail = TextEditingController();
+var txtSenha = TextEditingController();
+//var txtConfSenha = TextEditingController();
+var txtNickname = TextEditingController();
 
 class TelaRegistro extends StatefulWidget {
   const TelaRegistro({Key? key}) : super(key: key);
@@ -22,15 +31,12 @@ class _TelaRegistroState extends State<TelaRegistro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       //APPBAR INVISIVEL
-      appBar:           
-      PreferredSize(
-        preferredSize: Size.fromHeight(60.0),        
-        child:       
-        AppBar(
-          title: 
-          Text("LoL Matching", 
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          title: Text(
+            "LoL Matching",
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
@@ -38,84 +44,81 @@ class _TelaRegistroState extends State<TelaRegistro> {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.transparent,          
+          backgroundColor: Colors.transparent,
           elevation: 0,
-          leading:
-            IconButton(            
-            onPressed: (){
+          leading: IconButton(
+            onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back, color: primaryColor,),    
-              iconSize: 30,
-              //Deixa o efeito de clique praticamente invisivel
-              splashRadius: 1,                                               
-            ),                      
-          actions: [],          
+            icon: Icon(
+              Icons.arrow_back,
+              color: primaryColor,
+            ),
+            iconSize: 30,
+            //Deixa o efeito de clique praticamente invisivel
+            splashRadius: 1,
+          ),
+          actions: [],
         ),
       ),
 
-
       backgroundColor: secondaryColor,
-      body:       
-        Container(
-        margin: EdgeInsets.fromLTRB(26, 40, 26, 80),          
-        child:    
-
-        Column(   
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,               
-          children: [ 
-
+      body: Container(
+        margin: EdgeInsets.fromLTRB(26, 40, 26, 80),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             //EMAIL
-            CampoTextoWidget("Email", false),
+            CampoTextoWidget("Email", false, txtEmail),
 
             //NOME
-            CampoTextoWidget("Nome", false),      
+            CampoTextoWidget("Nome", false, txtNome),
+
+            //NICKNAME
+            CampoTextoWidget("Nickname", false, txtNickname),
 
             //SENHA
-            Container(
-              child: CampoTextoWidget("Senha", true),
-            ),
+            CampoTextoWidget("Senha", true, txtSenha),
 
             //CONFIRMAR SENHA
-            CampoTextoWidget("Confirmar senha", true), 
-  
+            //CampoTextoWidget("Confirmar senha", true, txtConfSenha),
+
             botao("CRIAR"),
-  
           ],
-        ),),
-      );
+        ),
+      ),
+    );
   }
 
   //BOTÃO TROCA DE CONTEXTO
-  botao(titulo){
-    
-      return Container(        
-        width: 148,
-        height: 58,
-        child: ElevatedButton(
+  botao(titulo) {
+    return Container(
+      width: 148,
+      height: 58,
+      child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: primaryColor,        
-          ),
-        onPressed: (){
+          primary: primaryColor,
+        ),
+        onPressed: () {
+          //LoginController().criarConta(context, txtNome.text, txtNickname.text,
+          //    txtEmail.text, txtSenha.text);
+          //},
           final snackBar = SnackBar(
             content: const Text('Conta criada com sucesso!'),
             duration: Duration(seconds: 2, milliseconds: 500),
             action: SnackBarAction(
-              label: "Fechar",              
+              label: "Fechar",
               onPressed: () {},
             ),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
           Navigator.of(context).pop();
-        }, 
-        child: 
-        Text(titulo, 
-          style: TextStyle(
-            color: secondaryColor, 
-            fontSize: 16
-          ),
+        },
+        child: Text(
+          titulo,
+          style: TextStyle(color: secondaryColor, fontSize: 16),
         ),
-        ),
-        );
-    }
+      ),
+    );
+  }
 }

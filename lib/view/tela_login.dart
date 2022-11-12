@@ -16,6 +16,8 @@ class TelaLogin extends StatefulWidget {
 class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
+    var txtEmail = TextEditingController();
+    var txtSenha = TextEditingController();
     return Scaffold(
       backgroundColor: secondaryColor,
       body: 
@@ -35,10 +37,10 @@ class _TelaLoginState extends State<TelaLogin> {
             
             Container(
               margin: EdgeInsets.only(bottom: 36),
-              child: CampoTextoWidget("Email", false),
+              child: CampoTextoWidget("Email", false, txtEmail),
             ),
           
-            CampoTextoWidget("Senha", true),
+            CampoTextoWidget("Senha", true, txtSenha),
 
             //CRIAR CONTA
             Container(

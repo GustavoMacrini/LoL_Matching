@@ -5,8 +5,9 @@ import 'package:lol_matching/model/variaveis.dart';
 class CampoTextoWidget extends StatelessWidget {
   final String title;
   final bool obscure;
+  final TextEditingController variavel;
   const CampoTextoWidget(
-    this.title, this.obscure,
+    this.title, this.obscure, this.variavel,
     {Key? key}) : super(key: key);
 
   @override
@@ -40,7 +41,8 @@ class CampoTextoWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),          
         ),
-        obscureText: obscure, 
+        obscureText: obscure,
+        controller: variavel, 
       ),
       ],
       ),
