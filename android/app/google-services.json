@@ -29,6 +29,13 @@
             {
               "client_id": "601726379652-4ib466r3c72c1cec87gfsbe7gldpt28e.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "601726379652-vnrkulfa51oqa9rd75efvjt6saknqjpo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lolMatching"
+              }
             }
           ]
         }
