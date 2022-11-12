@@ -100,19 +100,18 @@ class _TelaRegistroState extends State<TelaRegistro> {
           primary: primaryColor,
         ),
         onPressed: () {
-          //LoginController().criarConta(context, txtNome.text, txtNickname.text,
-          //    txtEmail.text, txtSenha.text);
-          //},
-          final snackBar = SnackBar(
-            content: const Text('Conta criada com sucesso!'),
-            duration: Duration(seconds: 2, milliseconds: 500),
-            action: SnackBarAction(
-              label: "Fechar",
-              onPressed: () {},
-            ),
-          );
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          Navigator.of(context).pop();
+          LoginController().criarConta(context, txtNome.text, txtNickname.text,
+              txtEmail.text, txtSenha.text);
+          //final snackBar = SnackBar(
+          //  content: const Text('Conta criada com sucesso!'),
+          //  duration: Duration(seconds: 2, milliseconds: 500),
+          //  action: SnackBarAction(
+          //    label: "Fechar",
+          //    onPressed: () {},
+          //  ),
+          //);
+          //ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          //Navigator.of(context).pop();
         },
         child: Text(
           titulo,
