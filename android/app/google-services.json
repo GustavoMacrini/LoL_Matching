@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "601726379652",
+    "project_id": "lol-matching",
+    "storage_bucket": "lol-matching.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601726379652:android:e11633fba1c7d16d80c4d1",
+        "android_client_info": {
+          "package_name": "com.example.lol_matching"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601726379652-4ib466r3c72c1cec87gfsbe7gldpt28e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW4OF7iK9hoGSHX4TmWuR-sTXZRrWddFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601726379652-4ib466r3c72c1cec87gfsbe7gldpt28e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
