@@ -80,6 +80,8 @@ class _TelaLoginState extends State<TelaLogin> {
         ),
         onPressed: () {
           LoginController().login(context, txtEmail.text, txtSenha.text);
+          txtEmail.clear();
+          txtSenha.clear();
           //final snackBar = SnackBar(
           //  content: const Text('Bem Vindo!'),
           //  duration: Duration(seconds: 2, milliseconds: 500),
