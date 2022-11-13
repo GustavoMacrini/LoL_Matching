@@ -41,18 +41,87 @@ class _TelaLoginState extends State<TelaLogin> {
 
             CampoTextoWidget("Senha", true, txtSenha),
 
-            //CRIAR CONTA
+            //ESQUECEU SENHA
             Container(
               margin: EdgeInsets.fromLTRB(0, 10, 0, 80),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => TelaRegistro()));
+                    onPressed: (){
+
+                      showDialog(
+                      
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: Text(
+                          'Informe seu e-mail',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: primaryColor,
+                          ),
+                        ),
+                        titlePadding: EdgeInsets.all(20),
+                        content: Container(
+                          width: 350,
+                          height: 90,
+                          child: Column(
+                            children: [
+                              CampoTextoWidget('E-mail', false, txtEmail),
+                            ],
+                          ),
+                        ),
+                        backgroundColor: secondaryColor,
+                        actionsPadding: EdgeInsets.fromLTRB(0, 0, 20, 20),
+                        actions: [
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              minimumSize: Size(120, 50),
+                            ),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              'cancelar',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: primaryColor,
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor: primaryColor,
+                              minimumSize: Size(120, 50),
+                            ),
+                            onPressed: () async {
+                              if (txtEmail.text.isNotEmpty) {
+                                LoginController().esqueceuSenha(txtEmail.text);
+                                sucesso(context, 'E-mail enviado com sucesso.');
+                              } else {
+                                erro(context,
+                                    'Informe o e-mail para recuperar a senha.');
+                              }
+
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              'enviar',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: secondaryColor,
+                              )
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+
+
+                      
                     },
                     child: Text(
-                      "Criar conta",
+                      "Esqueceu sua senha?",
                       style: TextStyle(
                         fontSize: 16,
                         color: Color.fromRGBO(13, 196, 217, 1),
@@ -64,6 +133,45 @@ class _TelaLoginState extends State<TelaLogin> {
             ),
 
             botao("ENTRAR"),
+
+            //CRIAR CONTA
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 20, 0, 80),
+              child: 
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Text("Ainda não tem uma conta?",
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontSize: 16,
+                      ),
+                    )
+                  ],),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => TelaRegistro()));
+                        },
+                        child: Text(
+                          "Cadastre-se",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Color.fromRGBO(13, 196, 217, 1),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),                  
+                ],
+              ),
+            ),
           ],
         ),
       ),
