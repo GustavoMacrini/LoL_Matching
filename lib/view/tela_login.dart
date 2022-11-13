@@ -30,7 +30,7 @@ class _TelaLoginState extends State<TelaLogin> {
             Container(
                 margin: EdgeInsets.fromLTRB(0, 27, 0, 35),
                 child: Image(
-                  image: AssetImage("lib/assets/logo/logo_app2.png"),
+                  image: AssetImage("lib/assets/logo/logo_app3.png"),
                   height: 100,
                 )),
 
