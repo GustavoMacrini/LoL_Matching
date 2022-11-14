@@ -57,7 +57,7 @@ class UsuarioWidget extends StatelessWidget {
               Row(   
                 mainAxisAlignment: MainAxisAlignment.start,                             
                 children: [
-                  Image(image: AssetImage("lib/assets/maestria/maestria7.png"), 
+                  Image(image: AssetImage("./lib/assets/maestria/maestria7.png"), 
                     height: 20,
                     width: 20,
                   ),
