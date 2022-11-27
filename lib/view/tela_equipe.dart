@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/widgets/equipe_widget.dart';
 import 'package:lol_matching/model/variaveis.dart';
+import 'package:lol_matching/view/equipe_exibir.dart';
+
+import '../controller/equipe_controller.dart';
 
 class TelaEquipe extends StatefulWidget {
   const TelaEquipe({Key? key}) : super(key: key);
@@ -11,7 +14,17 @@ class TelaEquipe extends StatefulWidget {
   State<TelaEquipe> createState() => _TelaEquipeState();
 }
 
+
 class _TelaEquipeState extends State<TelaEquipe> {
+
+  var listaUsuarios;
+
+  @override
+  void initState(){
+    super.initState();
+    listaUsuarios = EquipeController().retornaEquipe();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,16 +52,19 @@ class _TelaEquipeState extends State<TelaEquipe> {
             ),
 
             //MEMBROS EQUIPE
-            Container(              
-              child: Column(children: [
-              EquipeWidget("Kindred Kawaii", "jungle", 4650, true),
-              EquipeWidget("Agente Pleakley", "top", "aaaa", false),
-              EquipeWidget("Madeira Gustavo", "mid", 3248, false),
-              EquipeWidget("DrHansChucrute", "adc", 3249, false),
-              EquipeWidget("Chwn", "sup", 1234, false),
-              ]),
-            ),
+            // Container(              
+            //   child: //Column(children: [
+            //   // EquipeWidget("Kindred Kawaii", "jungle", 4650, true),
+            //   // EquipeWidget("Agente Pleakley", "top", "aaaa", false),
+            //   // EquipeWidget("Madeira Gustavo", "mid", 3248, false),
+            //   // EquipeWidget("DrHansChucrute", "adc", 3249, false),
+            //   // EquipeWidget("Chwn", "sup", 1234, false),
+            //   // ]),
 
+              
+            // ),
+
+              EquipeExibir(listaUsuarios),
 
             //BOTÃO DESFAZER EQUIPE
             Container(
