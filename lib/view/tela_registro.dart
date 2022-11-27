@@ -102,6 +102,8 @@ class _TelaRegistroState extends State<TelaRegistro> {
         onPressed: () {
           LoginController().criarConta(context, txtNome.text, txtNickname.text,
               txtEmail.text, txtSenha.text);
+
+
           //final snackBar = SnackBar(
           //  content: const Text('Conta criada com sucesso!'),
           //  duration: Duration(seconds: 2, milliseconds: 500),

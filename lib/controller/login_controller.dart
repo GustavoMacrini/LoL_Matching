@@ -16,7 +16,7 @@ class LoginController {
       FirebaseFirestore.instance.collection('usuarios').add({
         "uid": res.user!.uid.toString(),
         "nome": nome,
-        "nickname": nickname,
+        "nickname": nickname,        
       });
       sucesso(context, 'Conta criada com sucesso!');
       Navigator.pop(context);

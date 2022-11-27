@@ -9,9 +9,10 @@ class EquipeWidget extends StatelessWidget {
   final String nick;
   final String lane;
   final icon;
+  final owner;
 
   const EquipeWidget(
-    this.nick, this.lane, this.icon,
+    this.nick, this.lane, this.icon, this.owner,
     {Key? key}) : super(key: key);
 
   @override
@@ -42,8 +43,8 @@ class EquipeWidget extends StatelessWidget {
                 //Foto
                 CircleAvatar(
                   radius: 30.0,
-                  backgroundImage:
-                  NetworkImage("https://ddragon.leagueoflegends.com/cdn/12.19.1/img/profileicon/$icon.png"),
+                  backgroundImage:                    
+                    NetworkImage("https://ddragon.leagueoflegends.com/cdn/12.19.1/img/profileicon/$icon.png"),                                       
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -67,7 +68,11 @@ class EquipeWidget extends StatelessWidget {
               margin: EdgeInsets.only(right: 10),
               child: Image.asset('lib/assets/lanes/$lane.png',),height: 26, width: 26,),
             
-            //BOTÃO            
+            //BOTÃO 
+            owner? 
+            Container(              
+              child: Image.asset('lib/assets/icons/crown.png'),height: 26, width: 26,
+            ):
             Icon(Icons.close, color: primaryColor,)
             
           ],)
