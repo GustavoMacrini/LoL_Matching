@@ -18,8 +18,7 @@ class HistoricoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        // width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
         child: 
         Row(      
           mainAxisAlignment: MainAxisAlignment.spaceBetween,    

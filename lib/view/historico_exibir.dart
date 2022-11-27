@@ -21,10 +21,12 @@ class HistoricoExibir extends StatefulWidget {
 class _HistoricoExibirState extends State<HistoricoExibir> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+
+    //LISTA DE ROLAGEM DO HISTORICO
+    return Expanded(      
       child: Container(
         color: secondaryColor,
-        padding: EdgeInsets.fromLTRB(0, 10, 10, 0),
+        padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
         child: StreamBuilder<QuerySnapshot>(
           stream: widget.partidas.snapshots(),
           builder: (context, snapshot) {
@@ -47,7 +49,7 @@ class _HistoricoExibirState extends State<HistoricoExibir> {
                       String kda = item['kda'];
                       String rota = item['rota'];
                       bool vitoria = item['vitoria']; 
-
+          
                       return Card(
                         color: secondaryColor,
                         child: HistoricoWidget(campeao, rota, kda, farm, vitoria)
@@ -56,7 +58,7 @@ class _HistoricoExibirState extends State<HistoricoExibir> {
                   );
                 } else {
                   return Center(
-                    child: Text('Nenhuma tarefa encontrada.'),
+                    child: Text('Nenhuma partida encontrada.'),
                   );
                 }
             }
