@@ -7,10 +7,10 @@ class PesquisarController{
     List<String> rotas = [];
     var firstRota;
 
-    QuerySnapshot teste1 = await FirebaseFirestore.instance.collection("equipe").where('ativo', isEqualTo: false).get();
+    QuerySnapshot rotasQuery = await FirebaseFirestore.instance.collection("equipe").where('ativo', isEqualTo: false).get();
      
     //ADICIONA TODAS AS ROTAS QUE FALTAM EM UMA LISTA
-    for(var doc in teste1.docs){
+    for(var doc in rotasQuery.docs){
       rotas.add(doc['rota']);
     }
 

@@ -61,7 +61,9 @@ class _TelaEquipeState extends State<TelaEquipe> {
               height: 40,
               child: 
                   ElevatedButton(                    
-                    onPressed: (){},                   
+                    onPressed: (){
+                      EquipeController().dellEquipe();
+                    },                   
                     child: Text("Desfazer Equipe",
                       style: TextStyle(
                         color: secondaryColor,

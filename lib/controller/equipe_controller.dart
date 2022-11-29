@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:lol_matching/controller/login_controller.dart';
 
 class EquipeController{
 
@@ -27,6 +28,16 @@ class EquipeController{
       },
       SetOptions(merge: true)
       );
+    }
+
+    dellEquipe() async{
+      //List<String> rotas = [];
+      QuerySnapshot usuariosQuery = await FirebaseFirestore.instance.collection('equipe').where('nickname', isNotEqualTo: 'Kindred Kawaii').get();
+
+      for(var doc in usuariosQuery.docs){
+        dellUsuario(doc['rota'].toString());
+      }
+
     }
   
 }
