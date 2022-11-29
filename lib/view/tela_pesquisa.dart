@@ -29,8 +29,8 @@ class _TelaPesquisaState extends State<TelaPesquisa> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-     
+    return Scaffold(    
+
       backgroundColor: secondaryColor,
       body:
       

@@ -51,20 +51,9 @@ class _TelaEquipeState extends State<TelaEquipe> {
               ],),
             ),
 
-            //MEMBROS EQUIPE
-            // Container(              
-            //   child: //Column(children: [
-            //   // EquipeWidget("Kindred Kawaii", "jungle", 4650, true),
-            //   // EquipeWidget("Agente Pleakley", "top", "aaaa", false),
-            //   // EquipeWidget("Madeira Gustavo", "mid", 3248, false),
-            //   // EquipeWidget("DrHansChucrute", "adc", 3249, false),
-            //   // EquipeWidget("Chwn", "sup", 1234, false),
-            //   // ]),
+            //EXIBIR EQUIPE
+            EquipeExibir(listaUsuarios),
 
-              
-            // ),
-
-              EquipeExibir(listaUsuarios),
 
             //BOTÃO DESFAZER EQUIPE
             Container(

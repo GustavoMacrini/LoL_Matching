@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
+import '../../controller/pesquisar_controller.dart';
+
 class UsuarioWidget extends StatelessWidget {
   final int icon;
   final String nickname;
@@ -15,6 +17,7 @@ class UsuarioWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
       width: 250,
       child: Row(
@@ -72,10 +75,17 @@ class UsuarioWidget extends StatelessWidget {
           ],),
 
           //ADICIONAR
-          Icon(Icons.person_add_rounded,          
-            color: primaryColor,
-            size: 40,
-          )
+          IconButton(
+            icon: Icon(Icons.person_add,                                 
+              color: primaryColor,
+              size: 40,
+            ), 
+            onPressed: (){
+             PesquisarController().searchRota(icon, nickname);
+            //EquipeController().addUsuario(icon, nickname );
+            },
+          ),
+          
 
         ],),
     );

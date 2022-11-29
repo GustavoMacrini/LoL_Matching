@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:lol_matching/model/variaveis.dart';
 
+import '../../controller/equipe_controller.dart';
+
 
 class EquipeWidget extends StatelessWidget {
 
@@ -70,10 +72,17 @@ class EquipeWidget extends StatelessWidget {
             
             //BOTÃO 
             owner? 
-            Container(              
+            Container(
+              margin: EdgeInsets.only(right: 10),              
               child: Image.asset('lib/assets/icons/crown.png'),height: 26, width: 26,
             ):
-            Icon(Icons.close, color: primaryColor,)
+            IconButton(
+              icon: Icon(Icons.close), 
+              color: primaryColor,
+              onPressed: (){
+                EquipeController().dellUsuario(lane);
+              },
+              )
             
           ],)
         ),
