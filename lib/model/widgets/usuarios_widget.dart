@@ -80,9 +80,8 @@ class UsuarioWidget extends StatelessWidget {
               color: primaryColor,
               size: 40,
             ), 
-            onPressed: (){
-             PesquisarController().searchRota(icon, nickname);
-            //EquipeController().addUsuario(icon, nickname );
+            onPressed: (){              
+              PesquisarController().searchRota(icon, nickname);            
             },
           ),
           

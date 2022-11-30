@@ -14,11 +14,13 @@ class PesquisarController{
       rotas.add(doc['rota']);
     }
 
+
     //PEGA A PRIMEIRA ROTA DA LISTA
     firstRota = rotas.first;
     
     //ADICIONA O USUARIO NA PRIMEIRA ROTA LIVRE
     EquipeController().addUsuario(icone, nickname, firstRota);
+
   }
 
 }

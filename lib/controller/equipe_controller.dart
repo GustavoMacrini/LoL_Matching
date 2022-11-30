@@ -7,8 +7,8 @@ class EquipeController{
       return  FirebaseFirestore.instance.collection('equipe').where('ativo', isEqualTo: true);      
     }
 
-    addUsuario(icone, nickname, rota){
-      
+    addUsuario(icone, nickname, rota){      
+
       //ATUALIZA A ROTA DADA COM AS INFORMAÇÕES DA CONTA
       FirebaseFirestore.instance.collection('equipe').doc(rota).set(
         {
@@ -31,7 +31,6 @@ class EquipeController{
     }
 
     dellEquipe() async{
-      //List<String> rotas = [];
       QuerySnapshot usuariosQuery = await FirebaseFirestore.instance.collection('equipe').where('nickname', isNotEqualTo: 'Kindred Kawaii').get();
 
       for(var doc in usuariosQuery.docs){
